@@ -30,7 +30,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.
 
 For full documentation, please visit the [project Wiki](https://github.com/MHSanaei/3x-ui/wiki).
 
-## Docker Deployment
+## 🐳 Docker Deployment
 
 A pre-built Docker image is automatically published to [GitHub Container Registry (GHCR)](https://github.com/2duat/3x-ui/pkgs/container/3x-ui) on every push to the `main` branch.
 
