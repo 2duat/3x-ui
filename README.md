@@ -43,9 +43,9 @@ docker run -d \
   -p 54321:2053 \
   ghcr.io/2duat/3x-ui:main
 ```
-账户：admin\
-密码：admin
-
+默认账号密码：
+- 用户名：`admin`
+- 密码：`admin`
 
 ## 特别感谢
 
