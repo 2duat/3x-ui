@@ -30,6 +30,22 @@ bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.
 
 For full documentation, please visit the [project Wiki](https://github.com/MHSanaei/3x-ui/wiki).
 
+## Docker Deployment
+
+A pre-built Docker image is automatically published to [GitHub Container Registry (GHCR)](https://github.com/2duat/3x-ui/pkgs/container/3x-ui) on every push to the `main` branch.
+
+### Run with Docker
+
+```bash
+docker run -d \
+  --name 3x-ui \
+  --restart=always \
+  -p 54321:2053 \
+  ghcr.io/2duat/3x-ui:main
+```
+Username: admin\
+Password: admin
+
 ## A Special Thanks to
 
 - [alireza0](https://github.com/alireza0/)
@@ -39,19 +55,7 @@ For full documentation, please visit the [project Wiki](https://github.com/MHSan
 - [Iran v2ray rules](https://github.com/chocolate4u/Iran-v2ray-rules) (License: **GPL-3.0**): _Enhanced v2ray/xray and v2ray/xray-clients routing rules with built-in Iranian domains and a focus on security and adblocking._
 - [Russia v2ray rules](https://github.com/runetfreedom/russia-v2ray-rules-dat) (License: **GPL-3.0**): _This repository contains automatically updated V2Ray routing rules based on data on blocked domains and addresses in Russia._
 
-## Support project
 
-**If this project is helpful to you, you may wish to give it a**:star2:
+## Stargazers over time
 
-<a href="https://www.buymeacoffee.com/MHSanaei" target="_blank">
-<img src="./media/default-yellow.png" alt="Buy Me A Coffee" style="height: 70px !important;width: 277px !important;" >
-</a>
-
-</br>
-<a href="https://nowpayments.io/donation/hsanaei" target="_blank" rel="noreferrer noopener">
-   <img src="./media/donation-button-black.svg" alt="Crypto donation button by NOWPayments">
-</a>
-
-## Stargazers over Time
-
-[![Stargazers over time](https://starchart.cc/MHSanaei/3x-ui.svg?variant=adaptive)](https://starchart.cc/MHSanaei/3x-ui)
+[![Stargazers over time](https://starchart.cc/2duat/3x-ui.svg?variant=adaptive)](https://starchart.cc/2duat/3x-ui)
