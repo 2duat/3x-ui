@@ -1,0 +1,29 @@
+name: Sync with upstream
+
+on:
+  workflow_dispatch:  # Allows manual trigger from GitHub UI
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your fork
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          fetch-depth: 0
+
+      - name: Add upstream remote and fetch
+        run: |
+          git remote add upstream https://github.com/mhsanaei/3x-ui.git
+          git fetch upstream
+
+      - name: Merge upstream/main into your main
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git merge upstream/main --no-edit
+
+      - name: Push merged changes to your fork
+        run: |
+          git push origin main
