@@ -30,6 +30,23 @@ bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.
 
 完整文档请参阅 [项目Wiki](https://github.com/MHSanaei/3x-ui/wiki)。
 
+## 🐳 使用 Docker 快速部署
+
+本项目提供自动构建的 Docker 镜像，托管于 GitHub Container Registry (GHCR)，支持一键部署。
+
+### 1. 拉取并运行容器
+
+```bash
+docker run -d \
+  --name 3x-ui \
+  --restart=always \
+  -p 54321:2053 \
+  ghcr.io/2duat/3x-ui:main
+```
+账户：admin\
+密码：admin
+
+
 ## 特别感谢
 
 - [alireza0](https://github.com/alireza0/)
