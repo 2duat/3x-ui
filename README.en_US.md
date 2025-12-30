@@ -37,12 +37,23 @@ A pre-built Docker image is automatically published to [GitHub Container Registr
 ### Run with Docker
 
 ```bash
+# 方式一：从 GHCR（推荐，速度快，国内也可用）
 docker run -d \
   --name 3x-ui \
   --restart=always \
   -p 54321:2053 \
   ghcr.io/2duat/3x-ui:main
 ```
+
+```bash
+# 方式二：从 Docker Hub（全球通用）
+docker run -d \
+  --name 3x-ui \
+  --restart=always \
+  -p 54321:2053 \
+  2duat/3x-ui:main
+```
+
 Username: admin\
 Password: admin
 
