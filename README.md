@@ -37,12 +37,23 @@ bash <(curl -Ls https://raw.githubusercontent.com/2duat/3x-ui/master/install.sh)
 ### 1. 拉取并运行容器
 
 ```bash
+# 方式一：从 GHCR（推荐，速度快，国内也可用）
 docker run -d \
   --name 3x-ui \
   --restart=always \
   -p 54321:2053 \
   ghcr.io/2duat/3x-ui:main
 ```
+
+```bash
+# 方式二：从 Docker Hub（全球通用）
+docker run -d \
+  --name 3x-ui \
+  --restart=always \
+  -p 54321:2053 \
+  2duat/3x-ui:main
+```
+
 默认账号密码：
 - 用户名：`admin`
 - 密码：`admin`
